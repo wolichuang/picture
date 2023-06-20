@@ -4,8 +4,8 @@
 .hN20_header{display:flex;font-size:0.32rem;height:55px;line-height:55px;background:#ffffff;border-bottom:1px solid #eee;}
 .hN20_header a {flex:1;color:#000;margin:0 10px;font-weight: bold;}
 .hN20_header span {flex:2;text-align:center;}
-/* .hN20_header .nav_back {background: url(../images/icon-header.png) no-repeat 3px 17px;text-indent:20px;} */
-/* .hN20_header .nav_rt {background: url(../images/icon-header.png) no-repeat -276px 19px;} */
+/* .hN20_header .nav_back {background: url(../images/icon-header.png) no-repeat 3px 17px;text-indent:20px;}
+.hN20_header .nav_rt {background: url(../images/icon-header.png) no-repeat -276px 19px;} */
 .hN20_equity .equity_form {margin:0 auto;font-size:0.32rem;}
 .hN20_equity .equity_form h2 {height:40px;line-height:40px;color:#323232;text-indent:20px;}
 .hN20_equity .equity_form input {font-size:0.26rem;height:55px;line-height:55px;border:0;text-indent:5px;color:#c2c2c2;}
