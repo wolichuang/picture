@@ -1,29 +1,11 @@
-/*业务开通*/
-.hN20_kaitong{}
-.hN20_kaitong .header{position: relative;}
-.hN20_kaitong .header .text{width:80%;position: absolute;left:10%;top:27%;font-size:0.32rem;}
-.hN20_kaitong .header .text h2 {color:#000;margin-bottom:10px;font-weight: bold;}
-.hN20_kaitong .header .text h2:before{content:"*";color:#e22618;margin-right:3px;}
-.hN20_kaitong .header .text p {display:block;color:#9f9f9f;font-size:0.26rem;line-height:24px;}
-.hN20_kaitong .header .text p:nth-of-type(2) {display:block;height:34px;line-height:34px;text-align:center;}
-.hN20_kaitong .header .text input {width:100%;font-size:0.32rem;height: 45px;line-height:45px;background:#f1f1f1;border:0;border-radius:25px;margin:10px auto;text-align:center;}
-.hN20_kaitong .header .text button {display:block;border:0;width:80%;height:0.9rem;line-height:0.9rem;margin:10px auto;font-size:0.3rem;}
-.hN20_kaitong .infos{width:85%;margin: 20px auto 50px auto;}
-.hN20_kaitong .infos h3{font-size:0.28rem;color:#299bff;margin:7px 0;}
-.hN20_kaitong .infos p{display:block;font-size:0.26rem;color: #656565;line-height:24px;margin-bottom:20px;}
-.hN20_kaitong .footer{font-size:0.28rem;height:0.9rem;line-height:0.9rem;color:#b6b6b6;background: #f0f0f0;text-align:center;}
-.pop-msg.layermchild{border-radius:7px;max-width:85%;}
-.pop-msg .layermcont{line-height:32px;margin: 0 auto;font-size:0.3rem;color: #5b5b5b;text-align:left;}
-.pop-msg .layermbtn{height: 47px;line-height:47px;}
-.pop-msg .layermbtn span:first-child{color:#299bff;height: 47px;line-height:47px;}
 
 /*获取权益*/
 .bg_gray {background: #f7f7f7;}
 .hN20_header{display:flex;font-size:0.32rem;height:55px;line-height:55px;background:#ffffff;border-bottom:1px solid #eee;}
 .hN20_header a {flex:1;color:#000;margin:0 10px;font-weight: bold;}
 .hN20_header span {flex:2;text-align:center;}
-.hN20_header .nav_back {background: url(../images/icon-header.png) no-repeat 3px 17px;text-indent:20px;}
-.hN20_header .nav_rt {background: url(../images/icon-header.png) no-repeat -276px 19px;}
+/* .hN20_header .nav_back {background: url(../images/icon-header.png) no-repeat 3px 17px;text-indent:20px;} */
+/* .hN20_header .nav_rt {background: url(../images/icon-header.png) no-repeat -276px 19px;} */
 .hN20_equity .equity_form {margin:0 auto;font-size:0.32rem;}
 .hN20_equity .equity_form h2 {height:40px;line-height:40px;color:#323232;text-indent:20px;}
 .hN20_equity .equity_form input {font-size:0.26rem;height:55px;line-height:55px;border:0;text-indent:5px;color:#c2c2c2;}
