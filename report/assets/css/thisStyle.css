@@ -23,8 +23,8 @@
 .hN20_success .st-img {max-width: 100%;text-align:center;}
 .hN20_success .st-img img {max-width: 100%;}
 .hN20_success .box {display: block;}
-.hN20_success .box h2 {font-size: .32rem;font-weight:bold;color:#000;text-align: center;height:45px;line-height:45px;border-bottom: 1px solid #d2d2d2;}
+.hN20_success .box h2 {font-size: 0.4rem;font-weight:bold;color:#000;text-align: center;height:45px;line-height:45px;border-bottom: 1px solid #d2d2d2;}
 .hN20_success .box ul {background:#f9f9f9;width:93%;clear: both;overflow: hidden;margin: 20px auto;}
-.hN20_success .box ul li {display: flex;width: 90%;justify-content:flex-start;align-items: center;border-bottom: 1px solid #f6f6f6;}
+.hN20_success .box ul li {font-size:0.32rem;display: flex;width: 90%;justify-content:flex-start;align-items: center;border-bottom: 1px solid #f6f6f6;}
 .hN20_success .box ul li span {font-weight:bold;display:inline-block;padding:5px 10px;width:1rem;height:1rem;line-height:1rem;background-color:#e9eaec;margin-right:20px;}
 .hN20_success .st-foot {position: fixed;left:0;right:0;bottom:0;}
