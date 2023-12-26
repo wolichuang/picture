@@ -1,44 +1,245 @@
-<!doctype html>
-<html>
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <link media="all" type="text/css" rel="stylesheet" href="./assets/css/common.css" />
-  <link media="all" type="text/css" rel="stylesheet" href="./assets/css/thisStyle.css" />
-</head>
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>研修网-证书查询</title>
+        <script src="//px.yanxiu.com/2020/js/jquery-3.4.1.min.js"></script>
+        <script src="//px.yanxiu.com/2020/js/template-web.js"></script>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #f5f5f5;
+            }
 
-<body>
-  <div class="hN20_header">
-    <a href="#" class="nav_back"></a>
-    <span>研修网-证书查询</span>
-    <a href="#" class="nav_rt"></a>
-  </div>
-  <div class="wxApp hN20_success">
-    <div class="st-img">
-      <img src="./assets/images/hd2.png" alt="">
-    </div>
-    <div class="box">
-      <h2>证书信息</h2>
-      <ul>
-        <li><span>项目名称</span> 临汾市2020年中小学幼儿园教师全员培训项目</li>
-        <li><span>姓名</span>王兴华</li>
-        <li><span>所在地区</span>山西省/临汾市/市直属</li>
-        <li><span>工作单位</span>临汾市第三中学校</li>
-        <li><span>证书编号</span></li>
-        <li><span>学时</span>成绩为100分</li>
-        <li><span>承训单位</span>中国教师研修网</li>
-      </ul>
-    </div>
-    <div class="st-img st-foot">
-      <img src="./assets/images/ft2.png" alt="">
-    </div>
-  </div>
-  <script type="text/javascript" src="./assets/js/common.js"></script>
-</body>
+            .main-warp {
+                max-width: 1180px;
+                margin: 0 auto;
+            }
 
+            .header-nav-wrap {
+                height: 50px;
+                line-height: 50px;
+                background: #204ADC;
+            } 
+
+            .header-nav-wrap .con {
+                margin: 0 auto;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                padding-left: 10px;
+            }
+
+
+            .header-nav-wrap .con span {
+                margin-left: 16px;
+                font-size: 20px;
+                font-family: PingFangSC-Regular, PingFang SC;
+                font-weight: 400;
+                color: #000;
+            }
+            .header-nav-wrap .con img {
+                height: 40px;
+                margin-top: 6px
+            }
+
+            footer {
+                width: 100%;
+                margin-top: 60px;
+                background: #204ADC;
+            }
+
+            footer .footer {
+                height: 72px;
+                width: 100%;
+                text-align: center;
+                margin-top: 30px;
+                padding-top: 20px;
+            }
+
+            footer .footer p {
+                font: 12px/25px "\5FAE\8F6F\96C5\9ED1";
+                color: #fff;
+                width: 100%;
+                text-align: center;
+                line-height: 22px;
+                padding: 0;
+                margin: 0;
+            }
+
+            .footer .beian {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .main-container {
+                margin: 0 auto;
+                min-height: calc(100vh - 180px);
+            }
+
+            .result-title {
+                text-align: center;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 6px;
+                display: none;
+            }
+
+            .table-result {
+                margin: 0 auto 20px;
+                font-size: 16px;
+                width: 95%;
+            }
+            .table-result tr td {
+                line-height: 24px;
+                padding: 10px;
+                border: none;
+                border-bottom:1px solid #fff;
+            }
+
+            .table-result tr td.label {
+                background: #e9eaeb;
+                font-weight: bold;
+            }
+
+            .error-msg {
+                text-align: center;
+                display: none;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="header-nav-wrap">
+            <div class="con main-warp">
+                <img
+                    src="//srt-read-online.3ren.cn/basebusiness/headimg/20200711/1594463173406z16UqUKCsw-17.png"
+                    alt="研修网"
+                />
+                <span class="title"></span>
+            </div>
+        </div>
+        <div id="main" class="main-container main-warp">
+            <h3 class="result-title">证书信息</h3>
+            <table id="resultTable" class="table-result" cellspacing="0" cellpadding="0">
+                <script id="resultTmpl" type="text/html">
+                    <tr>
+                        <td class="label" width="70">项目名称</td>
+                        <td class="txt">临汾市2020年度中小学幼儿园教师全员培训项目</td>
+                    </tr>
+                    <tr>
+                        <td class="label" width="70">姓名</td>
+                        <td class="txt">王兴华</td>
+                    </tr>
+                    <tr>
+                        <td class="label" width="70">所在地区</td>
+                        <td class="txt">山西省/临汾市/市辖区</td>
+                    </tr>
+                    <tr>
+                        <td class="label" width="70">工作单位</td>
+                        <td class="txt">山西省临汾市第三中学校</td>
+                    </tr>
+                    <tr>
+                        <td class="label" width="70">证书编号</td>
+                        <td class="txt"></td>
+                    </tr>
+                    <tr>
+                        <td class="label" width="70">学时</td>
+                        <td class="txt">成绩为95分</td>
+                    </tr>
+                    <tr>
+                        <td class="label" width="70">承训单位</td>
+                        <td class="txt">中国教师研修网</td>
+                    </tr>
+                </script>
+            </table>
+            <div class="error-msg">未查到证书信息</div>
+        </div>
+        <footer>
+            <div class="footer main-warp">
+                <p>
+                    <a
+                        target="_blank"
+                        href="http://www.beian.miit.gov.cn"
+                        class="beian"
+                    >
+                        京ICP备06018303号-7
+                    </a>
+                    <a
+                        target="_blank"
+                        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010202007407"
+                        class="beian"
+                    >
+                        京公网安备 11010202007407号
+                    </a>
+                </p>
+                <p>Copyright ©2020 中国教师研修网</p>
+            </div>
+        </footer>
+        <script>
+            function queryToJson(url = "") {
+                if (!url) {
+                    url = window.location.href;
+                }
+                var query = url.substr(url.lastIndexOf("?") + 1),
+                    result = {},
+                    kv,
+                    key,
+                    value,
+                    item;
+                query.split("&").forEach((param) => {
+                    if (param) {
+                        kv = param.split("=");
+                        key = kv[0];
+                        value = kv[1];
+                        item = result[key];
+                        if (typeof item === "undefined") {
+                            result[key] = value;
+                        } else if (
+                            Object.prototype.toString.call(item) ===
+                            "[object Array]"
+                        ) {
+                            item.push(value);
+                        } else {
+                            result[key] = [item, value];
+                        }
+                    }
+                });
+                return result;
+            }
+            $(function() {
+                var resultTmpl = template('resultTmpl');
+                var queries = queryToJson() || {};
+                var url = 'https://ipx-api' + (queries.dev ? '-dev' : '') + '.yanxiu.com/train-project-center/usercert/userCertDetail';
+                $('#resultTable').html(resultTmpl([]));
+                $('.result-title').show();
+                // $.ajax({
+                //     type: "GET",
+                //     url: url,
+                //     data: {
+                //         certId: queries.id
+                //     },
+                //     success: function (res) {
+                //         if(res.status && res.status.code == 200) {
+                //             $('#resultTable').html(resultTmpl(res.data));
+                //             $('.result-title').show();
+                //         } else {
+                //             $('.error-msg').text(res.desc || '未查到证书信息').show();
+                //             $('.result-title').hide();
+                //         }
+                //     },
+                //     error: function(err) {
+                //         $('.error-msg').text('查询证书出错').show();
+                //     }
+                // });
+            });
+        </script>
+    </body>
 </html>
